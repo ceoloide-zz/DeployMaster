@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <environment>INT</environment>
+  <configuration>Debug</configuration>
+  <WebAppURL>http://pmichlauspb99:37493</WebAppURL>
+  <wsp_path>\wsp\</wsp_path>
+  <dll_path>\dll\</dll_path>
+  <solution_path>
+    <![CDATA[C:\a-mmassare_CAPS_SPB99\CommercialDashboard\CAPS 1.5]]> 
+  </solution_path>
+  <solutions>
+    <solution id="PMI.SSCD.WebConfigINT.wsp" filter="uninstall" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.SiteStructure.wsp" filter="uninstall" webapp="false" GACdeploy="true" />
+    <solution id="NewsUpdates.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.AccessDeniedPage.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Alerts.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Assessment.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.BusinessEntities.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Common.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Controls.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.DashBoard.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.DataBaseUtilities.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Navigation.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Project.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.Reports.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.RoadMap.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+    <solution id="PMI.SSCD.WebService.wsp" filter="todeploy" webapp="false" GACdeploy="true" />
+  </solutions>
+  <features>
+    <feature id="88e9ff16-22b0-42ca-ac34-b702e7c06a57" scope="Site" >
+      <targeturl>http://pmichlauspb99:37493</targeturl>
+    </feature>
+  </features>
+  <steps>
+    <step>
+      <op>DisableAllFeatures</op>
+    </step>
+    <step>
+      <op>CleanWebConfigModifications</op>
+    </step>
+    <step>
+      <op>UninstallFilteredSolutions</op>
+      <filter>uninstall</filter>
+    </step>
+    <step>
+      <op>InstallFilteredSolutions</op>
+      <filter>uninstall</filter>
+    </step>
+    <step>
+      <op>UpdateAllSolutions</op>
+    </step>
+    <step>
+      <op>EnableAllFeatures</op>
+    </step>
+    <step>
+      <op>RestartOWSTimer</op>
+    </step>
+    <step>
+      <op>NoOp</op>
+      <gui>Contact Dendiu, Daniel to ask for additional instructions. Press [Enter] when Dendiu, Daniel is ready.</gui>
+    </step>
+    <step>
+      <op>NoOp</op>
+      <continue>Make sure to send to Dendiu, Daniel (daniel.dendiu@contracted.pmi.com) the file "transcript.txt" present in the local script folder.</continue>
+    </step>
+  </steps>
+</config>
+
+
+<!--BELOW ARE ALL THE AVAILABLE STEPS. -->
+<!--Continue, gui, exit, skip are optional for all tags. They are executed in this order after the step operation. -->
+<!--<steps>
+    <step>
+      <op>NoOp</op>
+      <message>Message to be displayed as part of the "NoOp" step. The message tag is optional for NoOp.</message>
+      <continue>Display this message and ask the user to press [Enter] to continue.</continue>
+      <gui>Display this message in yellow color and ask the user to press [Enter] to load the GUI. Once the user exits the GUI, the script continues.</gui>
+      <exit>Display this message in red and ask the user to input Y to stop the script or N to continue.</exit>
+    </step>
+    <step><op>CollectWSPs</op></step>
+    <step><op>CollectDLLs</op></step>
+	  <step><op>EnableForceAttribute</op></step>
+	  <step><op>DisableForceAttribute</op></step>
+	  <step><op>DisableAllFeatures</op></step>
+	  <step>
+		  <op>DisableSingleFeature</op>
+		  <id>312c3538-daa6-42e5-bbbc-f009e1906675</id>
+	  </step>
+	  <step><op>EnableAllFeatures</op></step>
+	  <step>
+		  <op>EnableSingleFeature</op>
+		  <id>312c3538-daa6-42e5-bbbc-f009e1906675</id>
+	  </step>
+	  <step><op>ListWebConfigModifications</op></step>
+	  <step>
+		  <op>UninstallSingleSolution</op>
+		  <id>PMI.SBBI.WebConfigINT.wsp</id>
+	  </step>
+	  <step>
+		  <op>InstallSingleSolution</op>
+		  <id>PMI.SBBI.WebConfigINT.wsp</id>
+	  </step>
+	  <step>
+		  <op>UpdateSingleSolution</op>
+		  <id>PMI.SBBI.WebConfigINT.wsp</id>
+	  </step>
+	  <step>
+		  <op>UninstallFilteredSolutions</op>
+		  <filter>test</filter>
+	  </step>
+	  <step>
+		  <op>InstallFilteredSolutions</op>
+		  <filter>test</filter>
+	  </step>
+	  <step>
+		  <op>UpdateFilteredSolutions</op>
+		  <filter>test</filter>
+	  </step>
+	  <step><op>UninstallAllSolutions</op></step>
+	  <step><op>InstallAllSolutions</op></step>
+	  <step><op>UpdateAllSolutions</op></step>
+	  <step><op>RestartOWSTimer</op></step>
+	  <step><op>CleanWebConfigModifications</op></step>
+  </steps>-->
